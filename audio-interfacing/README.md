@@ -20,14 +20,23 @@ This work is based on:
 - [ESP32 Sound Spectrum Implementation](https://github.com/pedrominatel/esp32-projects/blob/master/demo/sound_spectrum/main/i2s_spectrum_example_main.c)
 
 # Wiring
-The wiring configuration from INMP441 to ESP32 Devkit explained on this following table:
+The wiring configuration connect INMP441 to ESP32 Devkit explained on this following table:
 | INMP441   | DEVKIT    | ESP32-WROOM-32    | Note  |
 |:-------:|:-------:|:-----:|:------:|
 | L/R | GND | GND | The L/R connected to GND resulting in mono audio |
-| WS | | | Word select (WS) represent word clock lines in bus/timing diagram |
-| SD | | | Serial data (SD) represent two time-multiplexed data (first n-bits belongs to channel 0, the next belongs to channel 1, and repeat) line in bus/timing diagram |
-| SCK | | | Continuous serial clock (SCK) |
+| WS | D13 | GPIO13, ADC2, HSPI MOSI | Word select (WS) represent word clock lines (left channel: 0, right channel: 1) in bus/timing diagram |
+| SD | D12 | GPIO12, ADC2, HSPI MISO | Serial data (SD) represent two time-multiplexed data (first n-bits belongs to channel 0, the next belongs to channel 1, and repeat) line in bus/timing diagram |
+| SCK | D14 | GPIO14, ADC2, HSPI CLK | Continuous serial clock (SCK) indicates clock lines in bus/timing diagram. The clock can be provided by either transmitter or reciver which act as master |
 | GND | GND | GND | |
 | VDD | 3V3 | 3V3 | |
+
+# Environment Setup
+This work carried out on Archlinux environment. These following packages added on the environment:
+- [Python 3.9]
+- [Xtensa GCC]
+- [ESP-IDF]
+- [ESP-DSP]
+
+
 
 
