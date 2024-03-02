@@ -21,8 +21,7 @@ This work is based on:
 
 # Wiring
 The wiring configuration from INMP441 to ESP32 Devkit explained on this following table:
-|   Component   ||| Note    |
-| INMP441   | DEVKIT    | ESP32-WROOM-32    ||
+| INMP441   | DEVKIT    | ESP32-WROOM-32    | Note  |
 |:-------:|:-------:|:-----:|:------:|
 | L/R | GND | GND | The L/R connected to GND resulting in mono audio |
 | WS | | | |
