@@ -24,10 +24,10 @@ The wiring configuration from INMP441 to ESP32 Devkit explained on this followin
 | INMP441   | DEVKIT    | ESP32-WROOM-32    | Note  |
 |:-------:|:-------:|:-----:|:------:|
 | L/R | GND | GND | The L/R connected to GND resulting in mono audio |
-| WS | | | |
-| SD | | | |
-| SCK | | | |
-| GND | | | |
-| VDD | | | |
+| WS | | | Word select (WS) represent word clock lines in bus/timing diagram |
+| SD | | | Serial data (SD) represent two time-multiplexed data (first n-bits belongs to channel 0, the next belongs to channel 1, and repeat) line in bus/timing diagram |
+| SCK | | | Continuous serial clock (SCK) |
+| GND | GND | GND | |
+| VDD | 3V3 | 3V3 | |
 
 
