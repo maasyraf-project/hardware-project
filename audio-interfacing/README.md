@@ -41,6 +41,8 @@ After the packages are installed, then create a Python virtual environemnt
 
 ```sh
 cd $HOME
+# change the directory to home
+
 virtualenv --python=usr/bin/python3.9 esp-python --system-site-packages
 
 source $HOME/esp-python/bin/activate
@@ -48,6 +50,7 @@ pip install kconfiglib future cryptography pyserial pyparsing==2.2.0
 deactivate
 
 cd -
+# bring back to the previous directory
 
 ```
 
