@@ -77,7 +77,7 @@ export MAKEFLAGS="-j$(nproc)"
 # define the number of cores/thread that used during the process
 # nproc indicate the number of CPU cores/thread which available
 
-export GNUMAKEFLAGS="-j(nproc)"
+export GNUMAKEFLAGS="-j$(nproc)"
 # define the number of cores/thread that used during the process
 
 source $HOME/esp-python/bin/activate
