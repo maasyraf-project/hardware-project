@@ -39,7 +39,7 @@ This work carried out on Archlinux environment. These following packages added o
 
 After the packages are installed, then create a Python virtual environemnt
 
-'''sh
+```sh
 cd $HOME
 virtualenv --python=usr/bin/python3.9 esp-python --system-site-packages
 
@@ -49,6 +49,6 @@ deactivate
 
 cd -
 
-'''
+```
 
 
