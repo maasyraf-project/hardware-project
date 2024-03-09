@@ -44,10 +44,19 @@ cd $HOME
 # change the directory to home
 
 virtualenv --python=usr/bin/python3.9 esp-python --system-site-packages
+# basic format : virtualenv [interpreter] [environment_name] [config]
+# create new virtual env with selected interpreter using paremeter -p, --python and define the path
+# the parameter --system-site-packages will enable (True) the environment access to system site packages
+# for the details, check virtualenv -h, --help
 
 source $HOME/esp-python/bin/activate
+# for activate the virtual environement : source $HOME/environemnt_name/bin/activate
+
 pip install kconfiglib future cryptography pyserial pyparsing==2.2.0
+# inside the environment, install necessary packages using pip
+
 deactivate
+# deactivate and back to the initial (parent) environment
 
 cd -
 # bring back to the previous directory
